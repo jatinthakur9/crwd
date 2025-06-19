@@ -1,0 +1,231 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main-create {
+  background-color: #f8d849;
+
+  width: 100%;
+}
+/* Navbar */
+
+.navbar-create {
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 10;
+  border-radius: 100px;
+}
+
+.nav-create-left {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.nav-create-icon {
+  font-size: 2rem;
+}
+
+.nav-create-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-create-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.createe-btn {
+  background-color: #f8d849;
+  border: none;
+  height: 50px;
+  width: 180px;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 550;
+  color: black;
+}
+
+.heading-create-box {
+  display: flex;
+}
+
+.body-create-box {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+
+.span-text {
+  display: inline-block;
+
+  color: black;
+
+  font-family: "Urbanist", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1;
+
+  padding: 15px 30px;
+  border-radius: 300px;
+
+  margin-right: 950px; /* optional spacing between span and button */
+}
+
+.btn-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.family-urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+
+.btn_style {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 300px;
+}
+
+.btn_dark {
+  background: #000;
+  color: #ffd600;
+  border: 1px solid #000;
+}
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Urbanist", sans-serif;
+  color: #ffd600;
+  background-color: transparent;
+  padding: 30px;
+  width: 100%;
+  max-width: 90%;
+}
+
+/* .create-form label {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 10px;
+  } */
+
+.create-form label {
+  color: black;
+
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Urbanist", sans-serif;
+}
+
+.create-form input,
+.create-form textarea {
+  padding: 15px 30px;
+  border-radius: 300px;
+  border: 1px solid #ffd600;
+  background-color: #000;
+  color: #ffd600;
+  font-size: 16px;
+  font-family: "Urbanist", sans-serif;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.create-form input:focus,
+.create-form textarea:focus {
+  background-color: #000; /* keep it black */
+  color: #ffd600; /* keep text yellow */
+  border: 1px solid #ffd600; /* optional: keep border same */
+  outline: none; /* remove default blue outline */
+}
+
+.create-form textarea {
+  border-radius: 30px; /* less pill-like, more area */
+  resize: vertical;
+  min-height: 120px;
+}
+
+.create-form input::placeholder,
+.create-form textarea::placeholder {
+  color: #ffd60099;
+}
+
+.create-form button {
+  margin-top: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* helps with responsiveness */
+  margin-bottom: 20px;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-img {
+  display: block;
+  width: 100%;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.ChooseImage {
+  background-color: black !important;
+  color: white;
+}
+
+.file-input {
+  display: none;
+}
+
+.custom-file-label {
+  background-color: black;
+
+  color: #ffd60099 !important;
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "Urbanist", sans-serif; /* match your current font */
+  transition: background 0.3s;
+}
+
+.custom-file-label:hover {
+  background-color: #222;
+}

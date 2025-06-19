@@ -1,0 +1,163 @@
+.body.bg-dark {
+  background-color: #1a1a1a;
+}
+
+body.p-50 {
+  padding: 50px;
+}
+
+#main.color-with-spacing {
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#main.no-spacing-mobile {
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+body.profile-page-active {
+  background-color: #1a1a1a;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.yellowShape {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc93f;
+  clip-path: ellipse(30% 70% at 0% 2%);
+  z-index: 0;
+}
+
+/* header, */
+main {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* #main.color-with-spacing {
+  color: #fff;
+
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#main.no-spacing-mobile {
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+} */
+
+/* footer {
+  display: none;
+} */
+
+.edit-name {
+  display: flex;
+  margin-left: 280px;
+}
+.edit-icon-pencil {
+  height: 20px;
+  width: 20px;
+  padding-top: 10px;
+  padding-left: 5px;
+  color: #555;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.edit-icon-pencil:hover {
+  transform: scale(1.1);
+  color: #ffc93f;
+}
+
+.edit-field {
+  margin-left: 470px;
+}
+
+.edit-field input {
+  height: 40px;
+  width: 240px;
+  background-color: black;
+  color: white;
+  font-size: 22px;
+}
+.edit-icon-check {
+  height: 20px;
+  width: 20px;
+  padding-top: 10px;
+  padding-left: 5px;
+  color: #555;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+.edit-icon-check:hover {
+  transform: scale(1.1);
+  color: #ffc93f;
+}
+.edit-field-location {
+  margin-left: 10px;
+}
+
+.edit-field-location input {
+  height: 30px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 22px;
+}
+
+.edit-bio {
+  display: flex;
+}
+
+.edit-field-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.edit-field-bio textarea {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-family: "Segoe UI", sans-serif;
+  border: 1px solid #ccc;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.3s ease;
+}
+
+.edit-field-bio textarea:focus {
+  outline: none;
+  border-color: #ffc93f;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.edit-icon-check {
+  font-size: 20px;
+  color: #ffc93f; /* green-500 */
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.edit-icon-check:hover {
+  color: #ffc93f; /* darker green on hover */
+}
