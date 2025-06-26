@@ -13,6 +13,7 @@ import ProfilePage from "./Components/ProfilePage/ProfilePage";
 import ZipCode from "./Components/ZipCode/ZipCode";
 import GoogleCrwdMap from "./Components/GoogleCrwdMap/GoogleCrwdMap";
 import Payment from "./Components/Payment/Payment";
+import JoinCrwd from "./Components/JoinCrwd/JoinCrwd";
 
 export const userContext = createContext();
 
@@ -196,6 +197,7 @@ function App() {
           <Route path="/ProfilePage" element={<ProfilePage />} />
           <Route path="/ZipCode" element={<ZipCode />} />
           <Route path="/GoogleCrwdMap" element={<GoogleCrwdMap />} />
+          <Route path="/JoinCrwd" element={<JoinCrwd />} />
           <Route path="/Payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>

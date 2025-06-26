@@ -154,7 +154,7 @@ const MapComponent = () => {
               onClick={() => {
                 setLatitude(activeInfoWindow.lat);
                 setLongitude(activeInfoWindow.lng);
-                navigate("/Payment");
+                navigate("/JoinCrwd");
                 setActiveInfoWindow(null);
               }}
               style={{
