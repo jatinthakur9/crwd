@@ -6,15 +6,30 @@ import footerimage from "../../../assets/images/footer-people.png";
 import { userContext } from "../../../App";
 import { useNavigate } from "react-router";
 import Header from "../../Header/Header";
+import { useEffect, useRef } from "react";
 
 const CreateHome = () => {
   const navigate = useNavigate();
-  const { setName, setImage, setEventName, setDescription } =
-    useContext(userContext);
+  const {
+    setName,
+    setImage,
+    setEventName,
+    setDescription,
+    setZipcode,
+    setEventCost,
+    setEventAddress,
+    setLatitude,
+    setLongitude,
+  } = useContext(userContext);
 
   const [nameInput, setNameInput] = useState("");
   const [ageInput, setAgeInput] = useState("");
   const [eventInput, setEventInput] = useState("");
+  const [zipcodeInput, setZipcodeInput] = useState("");
+  const [eventCostinput, setEventCostInput] = useState("");
+  const [eventAddressInput, setEventAddressInput] = useState("");
+  const [latitudeInput, setLatitudeInput] = useState("");
+  const [longitudeInput, setLongitudeInput] = useState("");
   const [descInput, setDescInput] = useState("");
 
   const [errors, setErrors] = useState({});
@@ -25,6 +40,12 @@ const CreateHome = () => {
     if (!ageInput) newErrors.age = "Image is required";
     if (!eventInput.trim()) newErrors.event = "Event Name is required";
     if (!descInput.trim()) newErrors.description = "Description is required";
+    if (!latitudeInput.trim()) newErrors.latitude = "Latitude is required";
+    if (!longitudeInput.trim()) newErrors.longitude = "Longitude is required";
+
+    if (!zipcodeInput.trim()) newErrors.zipcode = "Zipcode is required";
+    if (!eventCostinput.trim()) newErrors.eventCost = "Event cost is required";
+    if (!eventAddressInput.trim()) newErrors.address = "Address is required";
 
     setErrors(newErrors);
 
@@ -33,27 +54,20 @@ const CreateHome = () => {
       setName(nameInput);
       setImage(ageInput);
       setEventName(eventInput);
+      setZipcode(zipcodeInput);
+      setEventCost(eventCostinput);
+      setEventAddress(eventAddressInput);
+      setLatitude(latitudeInput);
+      setLongitude(longitudeInput);
       setDescription(descInput);
+
       navigate("/CreateCrwdPeople");
       console.log("done");
-      // alert("All data saved in context!");
-      // You can navigate or do something else here
     }
   };
 
   return (
     <div className="main-create">
-      {/* <div className="navbar-create">
-        <div className="nav-create-left">
-          <img className="nav--create-icon" src={usericon} alt="user-icon" />
-        </div>
-        <div className="nav-create-right">
-          <button className="nav-create-btn">Home</button>
-          <button className="nav-create-btn">About CRWD</button>
-          <button className="nav-create-btn">Join Us</button>
-          <button className="createe-btn">Create CRWD</button>
-        </div>
-      </div> */}
       <Header />
 
       <div className="body-create-container">
@@ -84,19 +98,6 @@ const CreateHome = () => {
                   {errors.name && <p className="error-text">{errors.name}</p>}
                 </div>
 
-                {/* <div className="input-group">
-                  <label htmlFor="age">Image</label>
-                  <input
-                    className="ChooseImage"
-                    type="File"
-                    id="age"
-                    value={ageInput}
-                    onChange={(e) => setAgeInput(e.target.value)}
-                    placeholder="Enter your age"
-                  />
-                  {errors.age && <p className="error-text">{errors.age}</p>}
-                </div> */}
-
                 <div className="input-group">
                   <label htmlFor="fileInput"> Event Image</label>
 
@@ -109,8 +110,7 @@ const CreateHome = () => {
                       if (file) {
                         const reader = new FileReader();
                         reader.onloadend = () => {
-                          setAgeInput(reader.result); // base64 string
-                          // Optional: store in localStorage too
+                          setAgeInput(reader.result);
                         };
                         reader.readAsDataURL(file);
                       }
@@ -134,6 +134,90 @@ const CreateHome = () => {
                     placeholder="Enter event name"
                   />
                   {errors.event && <p className="error-text">{errors.event}</p>}
+                </div>
+              </div>
+              <div className="input-row">
+                <div className="input-group">
+                  <label htmlFor="eventAddress">Event Address</label>
+                  <input
+                    type="text"
+                    id="eventAddress"
+                    value={eventAddressInput}
+                    onChange={(e) => setEventAddressInput(e.target.value)}
+                    placeholder="Enter your event address"
+                  />
+                  {errors.address && (
+                    <p className="error-text">{errors.address}</p>
+                  )}
+                </div>
+                <div className="input-group">
+                  <label htmlFor="name"> Latitude</label>
+                  <input
+                    type="number"
+                    id="name"
+                    value={latitudeInput}
+                    onChange={(e) => setLatitudeInput(e.target.value)}
+                    placeholder="Your Area Latitude"
+                    // readOnly
+                  />
+                  {errors.longitude && (
+                    <p className="error-text">{errors.longitude}</p>
+                  )}
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="eventName">Longitude</label>
+                  <input
+                    type="number"
+                    id="eventName"
+                    value={longitudeInput}
+                    onChange={(e) => setLongitudeInput(e.target.value)}
+                    placeholder="Your Area Longitude"
+                  />
+                  {errors.longitude && (
+                    <p className="error-text">{errors.longitude}</p>
+                  )}
+                </div>
+              </div>
+              <div className="input-row-last ">
+                {/* <div className="input-group">
+                  <label htmlFor="eventAddress">Event Address</label>
+                  <input
+                    type="text"
+                    id="eventAddress"
+                    value={eventAddressInput}
+                    onChange={(e) => setEventAddressInput(e.target.value)}
+                    placeholder="Enter your event address"
+                  />
+                  {errors.event && <p className="error-text">{errors.event}</p>}
+                </div> */}
+                <div className="input-group-last">
+                  <label htmlFor="name"> Zipcode</label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={zipcodeInput}
+                    onChange={(e) => setZipcodeInput(e.target.value)}
+                    placeholder="Your Area Zipcode"
+                    // readOnly
+                  />
+                  {errors.zipcode && (
+                    <p className="error-text">{errors.zipcode}</p>
+                  )}
+                </div>
+
+                <div className="input-group-last">
+                  <label htmlFor="eventName">Event Cost</label>
+                  <input
+                    type="text"
+                    id="eventName"
+                    value={eventCostinput}
+                    onChange={(e) => setEventCostInput(e.target.value)}
+                    placeholder="Enter event Cost in Rupees"
+                  />
+                  {errors.eventCost && (
+                    <p className="error-text">{errors.eventCost}</p>
+                  )}
                 </div>
               </div>
 

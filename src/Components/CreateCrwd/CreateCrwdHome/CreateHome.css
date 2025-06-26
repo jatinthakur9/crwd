@@ -194,6 +194,22 @@
   gap: 10px;
 }
 
+.input-row-last {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* helps with responsiveness */
+  margin-bottom: 20px;
+}
+
+.input-group-last {
+  width: 392px;
+  /* flex: 1; */
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .footer-img {
   display: block;
   width: 100%;

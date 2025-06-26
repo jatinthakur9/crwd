@@ -1,0 +1,84 @@
+.gm-ui-hover-effect {
+  filter: invert(1);
+}
+
+.gm-style-iw-t::after {
+  background: black !important;
+}
+
+.gm-style-iw-t {
+  background-color: black !important;
+}
+*/ .gm-style-iw {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 10px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-info-window {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 250px;
+}
+
+.gm-ui-hover-effect img {
+  filter: invert(1) !important;
+}
+
+.gm-style-iw-t::after {
+  background: black !important;
+  box-shadow: none !important;
+}
+
+.gm-style-iw-tc {
+  background-color: black !important;
+  border-color: black transparent transparent black !important;
+}
+
+.gm-style-iw-d {
+  overflow: hidden !important;
+  background-color: black !important;
+}
+
+.gm-style-iw-t {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+.gm-style-iw {
+  background-color: black !important;
+  color: white !important;
+
+  padding: 10px !important;
+  border-radius: 10px !important;
+}
+
+.custom-info-window {
+  background-color: black;
+  color: white;
+}
+
+.gm-ui-hover-effect img {
+  filter: invert(1) !important;
+}
+
+.gm-style-iw-t::after {
+  background-color: black !important;
+  box-shadow: none !important;
+}
+
+.gm-style-iw-tc {
+  background-color: black !important;
+
+  border-color: black transparent transparent black !important;
+}
+
+.gm-style-iw-d {
+  background-color: black !important;
+}

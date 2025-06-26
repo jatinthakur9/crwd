@@ -70,8 +70,8 @@ const Header = () => {
 
   return (
     <div>
-      <header className="bg-dark br-30">
-        <div className="header-flex">
+      <header className="bg-dark br-30   ">
+        <div className="header-flex ">
           <div className="nav-brand">
             <div className="brand-link">
               <img src={userIcon} alt="user-icon" />
@@ -98,7 +98,7 @@ const Header = () => {
                   About CRWD
                 </a>
               </li>
-              <li className="menu-item">
+              <li onClick={() => navigate("/ZipCode")} className="menu-item">
                 <a className="menu-link family-jost primary-text">Join Us</a>
               </li>
             </ul>

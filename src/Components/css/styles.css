@@ -11,6 +11,7 @@ img {
 }
 /* Background Colors */
 .bg-dark {
+  /* position: fixed; */
   background-color: #0a0a0a;
 }
 .bg-primary {
@@ -375,8 +376,9 @@ a {
 }
 .form-flex-wrapper {
   display: flex;
+  padding-left: 65px;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 .form-flex-wrapper .form-field.w-100 {
   width: 100%;
@@ -1007,12 +1009,13 @@ body.yellow-top-left-shape {
 .sign_in_up-link a {
   color: #ffd600;
 }
+
 .popup {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  /* left: 0px; */
+  right: 900px;
+  top: 50px;
+  /* bottom: 400px; */
   display: flex;
   align-items: center;
   justify-content: center;

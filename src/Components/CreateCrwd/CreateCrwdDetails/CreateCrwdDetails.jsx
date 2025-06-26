@@ -168,7 +168,7 @@ const CreateCrwdDetails = () => {
 
             <div className="form-flex-wrapper">
               {/* What will your crwd do? */}
-              <div className="form-field w-50 " style={{ flex: "1 1 48%" }}>
+              <div className="form-field   " style={{ paddingRight: "120px" }}>
                 {" "}
                 {/* Adjusted width for flex container */}
                 <label className="field-label family-urbanist">
@@ -201,7 +201,7 @@ const CreateCrwdDetails = () => {
                 )}
               </div>
               {/* Type (Multi-select with button-like UI) */}
-              <div className="form-field" style={{ flex: "1 1 50%" }}>
+              <div className="form-field ">
                 {" "}
                 {/* Adjusted width for flex container */}
                 <label className="field-label family-urbanist">Type</label>
@@ -238,7 +238,7 @@ const CreateCrwdDetails = () => {
                 )}
               </div>
               {/* Sex */}
-              <div className="form-field w-30 ">
+              <div className="form-field  " style={{ paddingRight: "385px" }}>
                 <label className="field-label family-urbanist">Sex</label>
                 <div className="radio-flex-wrapper">
                   {["Male", "Female", "Nonbinary"].map((value) => (
@@ -264,7 +264,7 @@ const CreateCrwdDetails = () => {
               </div>
 
               {/* Age */}
-              <div className="form-field w-0" style={{ marginLeft: "282px" }}>
+              <div className="form-field ">
                 <label className="field-label family-urbanist">Age</label>
                 <div className="radio-flex-wrapper">
                   {["18-21", "21-30", "30-50", "50+"].map((value) => (
@@ -333,7 +333,10 @@ const CreateCrwdDetails = () => {
                 )}
               </div>
               {/* Submit Button */}
-              <div className="button-wrapper-full flex-end">
+              <div
+                className="button-wrapper-full flex-end"
+                style={{ paddingRight: "50px" }}
+              >
                 <button
                   type="submit"
                   className="btn-with-icon family-urbanist btn_style btn_dark"

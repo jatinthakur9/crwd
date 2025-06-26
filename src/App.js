@@ -10,6 +10,9 @@ import CreateCrwdDetails from "./Components/CreateCrwd/CreateCrwdDetails/CreateC
 import CrwdList from "./Components/CrwdList/CrwdList";
 import CrwdReviewPage from "./Components/CrwdReviewPage/CrwdReviewPage";
 import ProfilePage from "./Components/ProfilePage/ProfilePage";
+import ZipCode from "./Components/ZipCode/ZipCode";
+import GoogleCrwdMap from "./Components/GoogleCrwdMap/GoogleCrwdMap";
+import Payment from "./Components/Payment/Payment";
 
 export const userContext = createContext();
 
@@ -20,6 +23,12 @@ function App() {
   const [userName, setUserName] = useState("");
   const [image, setImage] = useState("");
   const [eventName, setEventName] = useState("");
+  const [zipcode, setZipcode] = useState("");
+  const [globalZipcode, setGlobalZipcode] = useState("");
+  const [eventCost, setEventCost] = useState("");
+  const [eventAddress, setEventAddress] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
   const [description, setDescription] = useState("");
   const [token, setToken] = useState("");
   const [peopleCount, setPeopleCount] = useState("");
@@ -32,15 +41,12 @@ function App() {
   const [location, setLocation] = useState("");
   const [bio, setBio] = useState("");
   const [profileImage, setProfileImage] = useState();
-  // 🆕 Trigger to create new event
+  const [joined, setJoined] = useState("");
   const [createEventTrigger, setCreateEventTrigger] = useState(false);
 
-  // ✅ Save new event on trigger
-  //this is my first use effect
   useEffect(() => {
     if (email) {
       const users = JSON.parse(localStorage.getItem("users")) || [];
-
       const currentUser = users.find((user) => user.email === email);
       if (currentUser) {
         setUserName(currentUser.userName || "");
@@ -59,7 +65,7 @@ function App() {
           const existingEvents = user.events || [];
 
           const newEvent = {
-            id: Date.now(), // Unique ID
+            id: Date.now(),
             name,
             image,
             eventName,
@@ -70,7 +76,36 @@ function App() {
             type,
             age,
             date,
+            zipcode,
+            eventAddress,
+            eventCost,
+            longitude,
+            latitude,
+            joined,
           };
+
+          let updatedZipcodes = user.zipcode || [];
+          const locationData = {
+            latitude,
+            longitude,
+            eventAddress,
+          };
+
+          const existingZip = updatedZipcodes.find((z) => z.code === zipcode);
+
+          if (existingZip) {
+            const locationExists = existingZip.locations.some(
+              (loc) => loc.latitude === latitude && loc.longitude === longitude
+            );
+            if (!locationExists) {
+              existingZip.locations.push(locationData);
+            }
+          } else {
+            updatedZipcodes.push({
+              code: zipcode,
+              locations: [locationData],
+            });
+          }
 
           return {
             ...user,
@@ -78,6 +113,8 @@ function App() {
             location,
             bio,
             profileImage,
+            zipcode: updatedZipcodes,
+            globalZipcode,
             events: [...existingEvents, newEvent],
           };
         }
@@ -85,7 +122,6 @@ function App() {
       });
 
       localStorage.setItem("users", JSON.stringify(updatedUsers));
-
       setCreateEventTrigger(false);
     }
   }, [createEventTrigger]);
@@ -105,6 +141,18 @@ function App() {
         setImage,
         eventName,
         setEventName,
+        zipcode,
+        setZipcode,
+        globalZipcode,
+        setGlobalZipcode,
+        eventAddress,
+        setEventAddress,
+        latitude,
+        setLatitude,
+        longitude,
+        setLongitude,
+        eventCost,
+        setEventCost,
         description,
         setDescription,
         token,
@@ -121,7 +169,6 @@ function App() {
         setType,
         date,
         setDate,
-
         createEventTrigger,
         setCreateEventTrigger,
         id,
@@ -132,6 +179,8 @@ function App() {
         setBio,
         profileImage,
         setProfileImage,
+        joined,
+        setJoined,
       }}
     >
       <BrowserRouter>
@@ -145,6 +194,9 @@ function App() {
           <Route path="/CrwdList" element={<CrwdList />} />
           <Route path="/CrwdReviewPage" element={<CrwdReviewPage />} />
           <Route path="/ProfilePage" element={<ProfilePage />} />
+          <Route path="/ZipCode" element={<ZipCode />} />
+          <Route path="/GoogleCrwdMap" element={<GoogleCrwdMap />} />
+          <Route path="/Payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>
     </userContext.Provider>
