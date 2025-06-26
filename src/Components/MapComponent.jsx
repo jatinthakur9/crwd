@@ -30,7 +30,7 @@ const MapComponent = () => {
   const [hovered, setHovered] = useState(false);
 
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyCdorSQbTE5_026OwWE1-srwRImAwnQzys",
+    googleMapsApiKey: "",
     libraries: libraries,
   });
 
