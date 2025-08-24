@@ -6,8 +6,11 @@
 
 .main-create {
   background-color: #f8d849;
-
   width: 100%;
+  min-height: 100vh; /* Add this */
+  /* background-color: #f8d849;
+
+  width: 100%; */
 }
 /* Navbar */
 
@@ -244,4 +247,10 @@
 
 .custom-file-label:hover {
   background-color: #222;
+}
+
+.yoyooy {
+  height: 100px;
+  width: 100%;
+  background-color: pink;
 }

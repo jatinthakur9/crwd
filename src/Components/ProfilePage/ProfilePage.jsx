@@ -238,6 +238,7 @@ const ProfilePage = () => {
       <main
         id="main"
         className="content-wrapper p-30 color-with-spacing no-spacing-mobile"
+        style={{ paddingTop: "100px" }}
       >
         <div className="container">
           <div className="top-button-flex justify-space-between">

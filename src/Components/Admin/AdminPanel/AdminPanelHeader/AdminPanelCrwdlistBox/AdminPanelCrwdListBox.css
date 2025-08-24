@@ -1,0 +1,309 @@
+.userListBox {
+  width: 97%;
+  height: 500px;
+  margin-top: 10px;
+  margin-left: 18px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  /* overflow-y: auto; */
+}
+
+.TopBox {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.TopBoxButtonn {
+  background-color: rgb(149, 149, 252);
+  height: 30px;
+  width: 8%;
+  border-radius: 10px;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  box-shadow: 0 0 10px #333;
+}
+
+.InsideBox {
+  margin-left: 10px;
+  width: 100%;
+  height: 500px;
+}
+
+.boxField {
+  margin: 10px;
+  height: 50px;
+  width: 100%;
+
+  border-radius: 10px;
+}
+
+.userField {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonDiv {
+  width: 12%;
+}
+
+.editButtonn {
+  background-color: pink;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.deleteButtonn {
+  background-color: pink;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.crwd-poppup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.crwd-poppup-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  position: relative;
+  box-shadow: 0 0 10px #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crwd-poppup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crwd-close-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.crwd-input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.crwd-poppup-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crwd-cancel-btn {
+  background-color: #ccc;
+}
+
+.crwd-error {
+  color: red;
+  font-size: 14px;
+}
+
+.crwd-edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.crwd-edit-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 0 10px #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crwd-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crwd-edit-close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.crwd-edit-input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.crwd-edit-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crwd-edit-cancel {
+  background-color: #ccc;
+}
+
+.crwd-edit-error {
+  color: red;
+  font-size: 14px;
+}
+
+.crwd-edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.crwd-edit-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 0 10px #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crwd-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crwd-edit-close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.crwd-edit-input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.crwd-edit-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crwd-edit-cancel {
+  background-color: #ccc;
+}
+
+.crwd-edit-error {
+  color: red;
+  font-size: 14px;
+}
+
+.crwd-join-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.crwd-join-popup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.crwd-join-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crwd-join-close {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.crwd-join-count {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.crwd-join-input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.crwd-join-error {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.crwd-join-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crwd-join-actions button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.crwd-join-cancel {
+  background-color: #6c757d;
+}

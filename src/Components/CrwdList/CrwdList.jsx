@@ -75,7 +75,7 @@ const CrwdList = () => {
       </header> */}
       <Header />
 
-      <div className="events-container">
+      <div className="events-container" style={{ paddingTop: "130px" }}>
         <h2 className="header">My Events</h2>
         <div className="cards-wrapper">
           {events.length > 0 ? (
@@ -95,7 +95,7 @@ const CrwdList = () => {
                   {/* <strong></strong> {new Date(event.date).toLocaleString()} */}
                   {/* <strong>Event Date:</strong>{" "} */}
                   <div
-                    style={{ display: "flex", gap: "120px", flexWrap: "wrap" }}
+                    style={{ display: "flex", gap: "100px", flexWrap: "wrap" }}
                   >
                     <span>
                       {new Date(event.date).toLocaleDateString("en-US", {

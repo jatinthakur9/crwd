@@ -7,7 +7,7 @@ const GoogleCrwdMap = () => {
   return (
     <div>
       <Header />
-      <div>Helllo</div>
+
       <MapComponent />
     </div>
   );

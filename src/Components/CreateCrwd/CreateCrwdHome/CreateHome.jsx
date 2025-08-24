@@ -70,7 +70,7 @@ const CreateHome = () => {
     <div className="main-create">
       <Header />
 
-      <div className="body-create-container">
+      <div className="body-create-container   " style={{ paddingTop: "100px" }}>
         <div className="body-create-box">
           <div className="heading-create-box">
             <span className="span-text">Create Your CRWD</span>
@@ -158,7 +158,6 @@ const CreateHome = () => {
                     value={latitudeInput}
                     onChange={(e) => setLatitudeInput(e.target.value)}
                     placeholder="Your Area Latitude"
-                    // readOnly
                   />
                   {errors.longitude && (
                     <p className="error-text">{errors.longitude}</p>
@@ -180,17 +179,6 @@ const CreateHome = () => {
                 </div>
               </div>
               <div className="input-row-last ">
-                {/* <div className="input-group">
-                  <label htmlFor="eventAddress">Event Address</label>
-                  <input
-                    type="text"
-                    id="eventAddress"
-                    value={eventAddressInput}
-                    onChange={(e) => setEventAddressInput(e.target.value)}
-                    placeholder="Enter your event address"
-                  />
-                  {errors.event && <p className="error-text">{errors.event}</p>}
-                </div> */}
                 <div className="input-group-last">
                   <label htmlFor="name"> Zipcode</label>
                   <input
@@ -199,7 +187,6 @@ const CreateHome = () => {
                     value={zipcodeInput}
                     onChange={(e) => setZipcodeInput(e.target.value)}
                     placeholder="Your Area Zipcode"
-                    // readOnly
                   />
                   {errors.zipcode && (
                     <p className="error-text">{errors.zipcode}</p>
@@ -237,11 +224,11 @@ const CreateHome = () => {
         </div>
       </div>
 
-      <div className="footer-create">
+      {/* <div className="footer-create">
         <footer>
           <img className="footer-img" src={footerimage} alt="" />
         </footer>
-      </div>
+      </div> */}
     </div>
   );
 };

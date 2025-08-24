@@ -89,6 +89,7 @@ const CrwdReviewPage = () => {
       <main
         id="main"
         className="content-wrapper p-30 color-with-spacing no-spacing-mobile"
+        style={{ paddingTop: "130px" }}
       >
         <div className="crwd-review-container">
           <div className="back-link-wrapper">

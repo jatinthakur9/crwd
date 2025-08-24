@@ -14,12 +14,17 @@ import ZipCode from "./Components/ZipCode/ZipCode";
 import GoogleCrwdMap from "./Components/GoogleCrwdMap/GoogleCrwdMap";
 import Payment from "./Components/Payment/Payment";
 import JoinCrwd from "./Components/JoinCrwd/JoinCrwd";
+import AdminLogin from "./Components/Admin/AdminLogin/AdminLogin";
+
+import AdminPanel from "./Components/Admin/AdminPanel/AdminPanel";
+import AdminLoginChecking from "./Components/Admin/AdminLogin/AdminLoginChecking";
 
 export const userContext = createContext();
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const [name, setName] = useState("");
   const [userName, setUserName] = useState("");
   const [image, setImage] = useState("");
@@ -42,7 +47,9 @@ function App() {
   const [location, setLocation] = useState("");
   const [bio, setBio] = useState("");
   const [profileImage, setProfileImage] = useState();
-  const [joined, setJoined] = useState("");
+  const [joined, setJoined] = useState("0");
+  const [joinedUsers, setJoinedUsers] = useState([]);
+  const [idChecker, setIdChecker] = useState("");
   const [createEventTrigger, setCreateEventTrigger] = useState(false);
 
   useEffect(() => {
@@ -83,6 +90,7 @@ function App() {
             longitude,
             latitude,
             joined,
+            joinedUsers,
           };
 
           let updatedZipcodes = user.zipcode || [];
@@ -133,6 +141,7 @@ function App() {
         email,
         setEmail,
         password,
+
         setPassword,
         name,
         setName,
@@ -182,6 +191,10 @@ function App() {
         setProfileImage,
         joined,
         setJoined,
+        joinedUsers,
+        setJoinedUsers,
+        idChecker,
+        setIdChecker,
       }}
     >
       <BrowserRouter>
@@ -199,6 +212,14 @@ function App() {
           <Route path="/GoogleCrwdMap" element={<GoogleCrwdMap />} />
           <Route path="/JoinCrwd" element={<JoinCrwd />} />
           <Route path="/Payment" element={<Payment />} />
+          <Route path="/AdminLogin" element={<AdminLogin />} />
+          {/* <Route path="/AdminHome" element={<AdminHome />} />
+          <Route path="/AdminCrwdList" element={<AdminCrwdList />} />
+          <Route path="/AdminZipCode" element={<AdminZipCode />} />
+          <Route path="/AdminJoinCrwd" element={<AdminJoinCrwd />} />
+          <Route path="/AdminPayment" element={<AdminPayment />} /> */}
+          <Route path="/AdminPanel" element={<AdminPanel />} />
+          <Route path="/AdminLoginChecking" element={<AdminLoginChecking />} />
         </Routes>
       </BrowserRouter>
     </userContext.Provider>

@@ -1,4 +1,11 @@
-/* Add these styles to your Header.css file */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #0a0a0a;
+}
 
 .header-right {
   display: flex;
@@ -103,10 +110,6 @@
   font-weight: 500;
 }
 
-/* .dropdown-item:hover {
-  background-color: #f8d849;
-} */
-
 .dropdown-item:last-child {
   border-radius: 0 0 8px 8px;
 }
@@ -115,11 +118,6 @@
   color: #dc3545;
 }
 
-/* .logout-item:hover {
-  background-color: #fff5f5;
-} */
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .dropdown-menu {
     right: -10px;

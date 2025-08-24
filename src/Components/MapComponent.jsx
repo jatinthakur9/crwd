@@ -23,6 +23,7 @@ const defaultCenter = {
 const libraries = ["geometry", "places"];
 
 const MapComponent = () => {
+  const { setIdChecker } = useContext(userContext);
   const { setLatitude, setLongitude } = useContext(userContext);
   const navigate = useNavigate();
   const [markers, setMarkers] = useState([]);
@@ -30,7 +31,7 @@ const MapComponent = () => {
   const [hovered, setHovered] = useState(false);
 
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: "",
+    googleMapsApiKey: "AIzaSyCdorSQbTE5_026OwWE1-srwRImAwnQzys",
     libraries: libraries,
   });
 
@@ -46,7 +47,7 @@ const MapComponent = () => {
 
           if (!isNaN(lat) && !isNaN(lng)) {
             allMarkers.push({
-              id: `${event.id}-${lat}-${lng}`,
+              id: event.id,
               lat,
               lng,
               eventName: event.eventName || "",
@@ -152,6 +153,8 @@ const MapComponent = () => {
 
             <button
               onClick={() => {
+                console.log(activeInfoWindow.id);
+                setIdChecker(activeInfoWindow.id);
                 setLatitude(activeInfoWindow.lat);
                 setLongitude(activeInfoWindow.lng);
                 navigate("/JoinCrwd");

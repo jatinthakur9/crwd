@@ -145,7 +145,11 @@ const CreateCrwdDetails = () => {
     <div className="bg-primary">
       <Header />
 
-      <main id="main" className="content-wrapper p-30">
+      <main
+        id="main"
+        className="content-wrapper p-30"
+        style={{ paddingTop: "140px" }}
+      >
         <div className="container">
           <form id="crwd_form" noValidate onSubmit={handleSubmit}>
             <div className="top-button-flex justify-space-between">

@@ -40,93 +40,95 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <nav className="navbar">
-        <div className="nav-left">
-          <img className="nav-icon" src={usericon} alt="user-icon" />
-        </div>
-        <div className="nav-right">
-          <button className="nav-btn">Home</button>
-          <button className="nav-btn">About CRWD</button>
-          <button className="nav-btn">Join Us</button>
-          <button
-            className="create-btn"
-            onClick={() => {
-              alert("Please Login");
-            }}
-          >
-            Create CRWD
-          </button>
-        </div>
-      </nav>
-
-      <div className="yellow-shape" />
-
-      <div className="login-content">
-        <div className="logo-circle">
-          <div className="logo">
-            <img src={logo} alt="" />
+    <div className="body">
+      <div className="login-container">
+        <nav className="navbar">
+          <div className="nav-left">
+            <img className="nav-icon" src={usericon} alt="user-icon" />
           </div>
-        </div>
-
-        <form className="login-form" onSubmit={handlelogin}>
-          <h3>Email Address</h3>
-          <div className="input-box">
-            <img src={envelope} alt="Email Icon" className="icon" />
-            <input
-              type="email"
-              id="email"
-              value={inputEmail}
-              placeholder="jatin@gmail.com"
-              onChange={(e) => setInputEmail(e.target.value)}
-              required
-            />
-          </div>
-
-          <h3>Password</h3>
-          <div className="input-box">
-            <img src={lock} alt="Lock Icon" className="icon" />
-            <input
-              type="password"
-              id="password"
-              value={inputPassword}
-              placeholder="Enter your password..."
-              onChange={(e) => setInputPassword(e.target.value)}
-              required
-            />
-          </div>
-
-          <button className="login-btn" type="submit">
-            LOG IN →
-          </button>
-
-          {message && (
-            <div
-              className={`message-box ${
-                message.startsWith("Error") ? "error" : "success"
-              }`}
+          <div className="nav-right">
+            <button className="nav-btn">Home</button>
+            <button className="nav-btn">About CRWD</button>
+            <button className="nav-btn">Join Us</button>
+            <button
+              className="create-btn"
+              onClick={() => {
+                alert("Please Login");
+              }}
             >
-              {message}
-            </div>
-          )}
+              Create CRWD
+            </button>
+          </div>
+        </nav>
 
-          <div className="social-icons">
-            <div>
-              <img src={facebook} alt="Facebook" className="icon" />
-            </div>
-            <div>
-              <img src={google} alt="Google" className="icon" />
-            </div>
-            <div>
-              <img src={inst} alt="Instagram" className="icon" />
+        <div className="yellow-shape" />
+
+        <div className="login-content">
+          <div className="logo-circle">
+            <div className="logo">
+              <img src={logo} alt="" />
             </div>
           </div>
 
-          <p className="signup-text">
-            Don't have an account?{" "}
-            <span onClick={() => navigate("/SignUp")}>Sign Up Now</span>
-          </p>
-        </form>
+          <form className="login-form" onSubmit={handlelogin}>
+            <h3>Email Address</h3>
+            <div className="input-box">
+              <img src={envelope} alt="Email Icon" className="icon" />
+              <input
+                type="email"
+                id="email"
+                value={inputEmail}
+                placeholder="jatin@gmail.com"
+                onChange={(e) => setInputEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            <h3>Password</h3>
+            <div className="input-box">
+              <img src={lock} alt="Lock Icon" className="icon" />
+              <input
+                type="password"
+                id="password"
+                value={inputPassword}
+                placeholder="Enter your password..."
+                onChange={(e) => setInputPassword(e.target.value)}
+                required
+              />
+            </div>
+
+            <button className="login-btn" type="submit">
+              LOG IN →
+            </button>
+
+            {message && (
+              <div
+                className={`message-box ${
+                  message.startsWith("Error") ? "error" : "success"
+                }`}
+              >
+                {message}
+              </div>
+            )}
+
+            <div className="social-icons">
+              <div>
+                <img src={facebook} alt="Facebook" className="icon" />
+              </div>
+              <div>
+                <img src={google} alt="Google" className="icon" />
+              </div>
+              <div>
+                <img src={inst} alt="Instagram" className="icon" />
+              </div>
+            </div>
+
+            <p className="signup-text">
+              Don't have an account?{" "}
+              <span onClick={() => navigate("/SignUp")}>Sign Up Now</span>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   );
