@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Payment.css";
 import Header from "../Header/Header";
 import { useNavigate } from "react-router";
